@@ -47,6 +47,39 @@ public class Day01 {
 	}
 	
 	public void d1p2(boolean test) {
+		int spot = 50;
+		int sum = 0;
+		setLinesP1(test);
+		initInstructions();
+		for(int instruction : instructions) {
+			spot += instruction;
+			boolean counted = false;
+			if(spot >99) {
+				sum += spot/100;
+				spot = spot%100;
+				counted = true;
+			}
+			else if(spot < 0) {
+				if(spot - instruction == 0) {
+					sum--;
+				}
+				while(spot < 0) {
+					spot += 100;
+					sum++;
+				}
+			}
+			if(!counted && spot == 0) {
+				sum++;
+			}
+		}
+		String ausgabe = "Sum in Part 2 ";
+		if(test) {
+			ausgabe = ausgabe + "Test: " + sum;
+		}
+		else {
+			ausgabe = ausgabe + ": " + sum;
+		}
+		System.out.println(ausgabe);
 		
 	}
 	
