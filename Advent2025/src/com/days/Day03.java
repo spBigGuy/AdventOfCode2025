@@ -10,7 +10,8 @@ public class Day03 {
 	private String full;
 	
 	public void d3p1(boolean test) {
-		setFullP1(test);
+		full = DataGetting.getFull(test, day, 1);
+		
 		int part = 1;
 		long sum = 0L;
 		String[] lines = full.split("\n");
@@ -50,7 +51,7 @@ public class Day03 {
 
 	
 	public void d3p2(boolean test) {
-		setFullP1(test);
+		full = DataGetting.getFull(test, day, 1);
 
 		String[] lines = full.split("\n");
 		int part = 2;
@@ -85,15 +86,5 @@ public class Day03 {
 		}
 		
 		OutputMaker.outputResult(test, day, part, sum);
-	}
-	
-	private void setFullP1(boolean test) {
-		if(test) {
-			full = DataGetting.getFullTextFromFile("Day03T1.txt");
-			
-		}
-		else {
-			full = DataGetting.getFullTextFromFile("Day03P1.txt");
-		}
 	}
 }

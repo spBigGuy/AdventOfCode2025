@@ -11,7 +11,7 @@ public class Day02 {
 	
 	public void d2p1(boolean test) {
 		int part = 1;
-		setFullP1(test);
+		full = DataGetting.getFull(test, day, 1);
 		lines = full.split(",");
 		long sum = 0;
 		String[] parts;
@@ -35,7 +35,7 @@ public class Day02 {
 	
 	
 	public void d2p2(boolean test) {
-		setFullP1(test);
+		full = DataGetting.getFull(test, day, 1);
 		int part = 2;
 		
 		lines = full.split(",");
@@ -99,13 +99,4 @@ public class Day02 {
 		return true;
 	}
 	
-	private void setFullP1(boolean test) {
-		if(test) {
-			full = DataGetting.getFullTextFromFile("Day02T1.txt");
-			
-		}
-		else {
-			full = DataGetting.getFullTextFromFile("Day02P1.txt");
-		}
-	}
 }
