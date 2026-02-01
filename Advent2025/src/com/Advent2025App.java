@@ -1,10 +1,11 @@
 package com;
 
-import com.days.Day01;
+import com.days.*;
 
 public class Advent2025App {
 	public static void main(String[] args) {
-		int day = Integer.parseInt(args[0]);
+		//int day = Integer.parseInt(args[0]);
+		int day = 2;
 		
 		switch(day) {
 			case 1:
@@ -15,6 +16,9 @@ public class Advent2025App {
 				d1.d1p2(false);
 				break;
 			case 2:
+				Day02 d2 = new Day02();
+				d2.d2p1(true);
+				d2.d2p1(false);
 				break;
 			case 3:
 				break;
