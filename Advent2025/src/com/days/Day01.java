@@ -1,6 +1,7 @@
 package com.days;
 
 import com.utils.DataGetting;
+import com.utils.OutputMaker;
 
 public class Day01 {
 	private String[] lines;
@@ -36,14 +37,7 @@ public class Day01 {
 				sum++;
 			}
 		}
-		String ausgabe = "Sum in Part 1 ";
-		if(test) {
-			ausgabe = ausgabe + "Test: " + sum;
-		}
-		else {
-			ausgabe = ausgabe + ": " + sum;
-		}
-		System.out.println(ausgabe);
+		OutputMaker.outputResult(test, 1, 1, sum);
 	}
 	
 	public void d1p2(boolean test) {
@@ -72,14 +66,9 @@ public class Day01 {
 				sum++;
 			}
 		}
-		String ausgabe = "Sum in Part 2 ";
-		if(test) {
-			ausgabe = ausgabe + "Test: " + sum;
-		}
-		else {
-			ausgabe = ausgabe + ": " + sum;
-		}
-		System.out.println(ausgabe);
+		OutputMaker.outputResult(test, 1, 2, sum);
+		
+		
 		
 	}
 	
