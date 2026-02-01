@@ -47,6 +47,45 @@ public class Day03 {
 		
 		OutputMaker.outputResult(test, day, part, sum);
 	}
+
+	
+	public void d3p2(boolean test) {
+		setFullP1(test);
+
+		String[] lines = full.split("\n");
+		int part = 2;
+		long sum = 0L;
+		int maxDigits = 12;
+		char[] digits;
+		int lastIndex;
+		char[] lineChars;
+		for(String line : lines) {
+			digits = new char[maxDigits];
+			lastIndex = 0;
+			lineChars = line.toCharArray();
+			for(int i = 0;i < maxDigits;i++) {
+				char max = 0;
+				for(int c = lastIndex;c< lineChars.length - maxDigits + i + 1; c++) {
+					if( lineChars[c] > max ) {
+						max = lineChars[c];
+						lastIndex = c;
+						if(max == '9') {
+							break;
+						}
+					}
+				}
+				digits[i] = max;
+				lastIndex++;
+			}
+			String huge = "";
+			for(char d : digits) {
+				huge = huge + d;
+			}
+			sum+= Long.parseLong(huge);
+		}
+		
+		OutputMaker.outputResult(test, day, part, sum);
+	}
 	
 	private void setFullP1(boolean test) {
 		if(test) {
