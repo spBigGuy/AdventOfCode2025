@@ -19,6 +19,8 @@ public class Advent2025App {
 				Day02 d2 = new Day02();
 				d2.d2p1(true);
 				d2.d2p1(false);
+				d2.d2p2(true);
+				d2.d2p2(false);
 				break;
 			case 3:
 				break;
