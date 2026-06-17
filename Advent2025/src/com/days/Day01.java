@@ -6,19 +6,13 @@ import com.utils.OutputMaker;
 public class Day01 {
 	private String[] lines;
 	private int[] instructions;
+	private int day = 1;
 	
-//	private String[] testLinesP1;
-//	private String[] fullLinesP1;
-	
-//	public Day01() {
-//		testLinesP1 = DataGetting.getLinesArrayFromFile("Day01T1.txt");
-//		fullLinesP1 = DataGetting.getLinesArrayFromFile("Day01P1.txt");
-//	}
 	
 	// method for part 1 of day 1
 	public void d1p1(boolean test) {
-		setLinesP1(test);
-		
+		lines = DataGetting.getFull(test, day, 1).split("\n");
+		int part = 1;
 		int spot = 50;
 		int sum = 0;
 		initInstructions();
@@ -37,13 +31,15 @@ public class Day01 {
 				sum++;
 			}
 		}
-		OutputMaker.outputResult(test, 1, 1, sum);
+		OutputMaker.outputResult(test, day, part, sum);
 	}
 	
 	public void d1p2(boolean test) {
 		int spot = 50;
 		int sum = 0;
-		setLinesP1(test);
+		int part = 2;
+		lines = DataGetting.getFull(test, day, 1).split("\n");
+		
 		initInstructions();
 		for(int instruction : instructions) {
 			spot += instruction;
@@ -66,7 +62,7 @@ public class Day01 {
 				sum++;
 			}
 		}
-		OutputMaker.outputResult(test, 1, 2, sum);
+		OutputMaker.outputResult(test, day, part, sum);
 		
 		
 		
@@ -90,13 +86,13 @@ public class Day01 {
 	}
 	
 	// sets the lines to the lines from the right file for Part 1 depending on if it is the test or not the test 
-	private void setLinesP1(boolean test) {
-		if(test) {
-			lines = DataGetting.getLinesArrayFromFile("Day01T1.txt");
-			
-		}
-		else {
-			lines = DataGetting.getLinesArrayFromFile("Day01P1.txt");
-		}
-	}
+//	private void setLinesP1(boolean test) {
+//		if(test) {
+//			lines = DataGetting.getLinesArrayFromFile("Day01T1.txt");
+//			
+//		}
+//		else {
+//			lines = DataGetting.getLinesArrayFromFile("Day01P1.txt");
+//		}
+//	}
 }

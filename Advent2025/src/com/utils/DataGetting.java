@@ -62,4 +62,22 @@ public class DataGetting {
 		String full = getFullTextFromFile(fileName);
 		return full.split("\n");
 	}
+	
+	public static String getFull( boolean test, int day, int part ) {
+		String fileName = "Day";
+		if(day < 10) {
+			fileName = fileName + "0" + day;
+		}
+		else {
+			fileName = fileName + day;
+		}
+		if(test) {
+			fileName = fileName + "T" + part + ".txt";
+		}
+		else {
+			fileName = fileName + "P" + part + ".txt";
+		}
+		return  getFullTextFromFile(fileName) ;
+	}
+	
 }

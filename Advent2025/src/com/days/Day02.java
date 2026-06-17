@@ -4,12 +4,14 @@ import com.utils.DataGetting;
 import com.utils.OutputMaker;
 
 public class Day02 {
-
+	private int day = 2;
+	
 	private String full;
 	private String[] lines;
 	
 	public void d2p1(boolean test) {
-		setFullP1(test);
+		int part = 1;
+		full = DataGetting.getFull(test, day, 1);
 		lines = full.split(",");
 		long sum = 0;
 		String[] parts;
@@ -27,13 +29,15 @@ public class Day02 {
 			}
 		}
 		
-		OutputMaker.outputResult(test, 2, 1, sum);
+		OutputMaker.outputResult(test, day, part, sum);
 		
 	}
 	
 	
 	public void d2p2(boolean test) {
-		setFullP1(test);
+		full = DataGetting.getFull(test, day, 1);
+		int part = 2;
+		
 		lines = full.split(",");
 		long sum = 0;
 		String[] parts;
@@ -55,7 +59,7 @@ public class Day02 {
 			
 		}
 		
-		OutputMaker.outputResult(test, 2, 2, sum);
+		OutputMaker.outputResult(test, day, part, sum);
 		
 	}
 	
@@ -95,13 +99,4 @@ public class Day02 {
 		return true;
 	}
 	
-	private void setFullP1(boolean test) {
-		if(test) {
-			full = DataGetting.getFullTextFromFile("Day02T1.txt");
-			
-		}
-		else {
-			full = DataGetting.getFullTextFromFile("Day02P1.txt");
-		}
-	}
 }
