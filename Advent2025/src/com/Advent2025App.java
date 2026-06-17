@@ -40,6 +40,8 @@ public class Advent2025App {
 				Day05 d5 = new Day05();
 				d5.d5p1(true);
 				d5.d5p1(false);
+				d5.d5p2(true);
+				d5.d5p2(false);
 				break;
 			case 6:
 				break;

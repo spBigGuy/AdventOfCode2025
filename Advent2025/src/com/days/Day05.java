@@ -1,7 +1,9 @@
 package com.days;
 
+import com.days.day05.RangeList;
 import com.utils.DataGetting;
 import com.utils.OutputMaker;
+
 
 public class Day05 {
 	private String full;
@@ -40,9 +42,15 @@ public class Day05 {
 		int part = 2;
 		long sum = 0L;
 		full = DataGetting.getFull(test, day, 1);
+		String[] ranges = full.split("\n\n")[0].split("\n");
 		
-		
+		RangeList rangeList = new RangeList();
+		rangeList.addAll(ranges);
+		rangeList.purgeMultiples();
+		rangeList.cleanOverlaps();
+		sum = rangeList.getFullFreshCount();
 		OutputMaker.outputResult(test, day, part, sum);
 	}
+	
 	
 }
