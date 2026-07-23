@@ -5,7 +5,7 @@ import com.days.*;
 public class Advent2025App {
 	public static void main(String[] args) {
 		//int day = Integer.parseInt(args[0]);
-		int day = 6;
+		int day = 7;
 		
 		switch(day) {
 			case 1:
@@ -43,12 +43,17 @@ public class Advent2025App {
 				d5.d5p2(true);
 				d5.d5p2(false);
 				break;
-			case 6:
+			case 6:	//not done yet
 				Day06 d6 = new Day06();
-				d6.d6p1(true);
-				d6.d6p1(false);
+//				d6.d6p1(true);
+//				d6.d6p1(false);
+				d6.d6p2(true);
+//				d6.d6p1(false);
 				break;
 			case 7:
+				Day07 d7 = new Day07();
+				d7.d7p1(true);
+				d7.d7p1(false);
 				break;
 			case 8:
 				break;

@@ -48,6 +48,17 @@ public class Day06 {
 		OutputMaker.outputResult(test, day, part, sum);
 	}
 	
+	public void d6p2(boolean test) {
+		int part = 1;
+		long sum = 0L;
+		full = DataGetting.getFull(test, day, 1);
+		String[] lines = full.split("\n");
+		for(String l : lines) {
+			System.out.println(l);
+		}
+		
+	}
+	
 	
 	
 	public void printAll() {
