@@ -33,4 +33,14 @@ public class GridUtils {
             System.out.println();
         }
     }
+	
+	// distance between two points in grid
+	public static double euclidDistanceBetweenTwoPoints(long[] j1, long[] j2) {
+		double sum = 0;
+		for (int i = 0; i < j2.length; i++) {
+			sum += Math.pow(j2[i] - j1[i], 2);
+		}
+		double result = Math.sqrt(  sum   );
+		return result;
+	}
 }

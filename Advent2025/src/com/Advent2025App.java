@@ -2,10 +2,12 @@ package com;
 
 import com.days.*;
 
+
+// change the integer day variable to the right day 
 public class Advent2025App {
 	public static void main(String[] args) {
 		//int day = Integer.parseInt(args[0]);
-		int day = 7;
+		int day = 8; 
 		
 		switch(day) {
 			case 1:
@@ -58,6 +60,9 @@ public class Advent2025App {
 				d7.d7p2(false);
 				break;
 			case 8:
+
+				Day08 d8 = new Day08();
+				d8.d8p1(true);
 				break;
 			case 9:
 				break;

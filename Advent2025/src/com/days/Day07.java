@@ -56,7 +56,7 @@ public class Day07 {
 		OutputMaker.outputResult(test, day, part, sum);
 	}
 	
-	// 25658146598 too low
+	// 2always remember to use long instead of integer, because can become big
 	
 	public void d7p2(boolean test) {
 		int part = 2;
